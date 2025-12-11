@@ -193,15 +193,6 @@ local function statusline(colors)
 end
 
 local function lualine(colors)
-    local l = {}
-
-    l.lualine_a_normal = { bg = colors.accent }
-    l.lualine_a_visual = { bg = colors.blue }
-    l.lualine_a_insert = { bg = colors.orange }
-
-    return l
-
-    --[[
     return {
         normal = {
             a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
@@ -209,12 +200,12 @@ local function lualine(colors)
             c = { fg = colors.norm, bg = colors.bg_very_subtle },
         },
         insert = {
-            a = { fg = colors.bg, bg = colors.orange, gui = "bold" },
+            a = { fg = colors.bg, bg = colors.hint, gui = "bold" },
             b = { fg = colors.norm, bg = colors.bg_subtle },
             c = { fg = colors.norm, bg = colors.bg_very_subtle },
         },
         visual = {
-            a = { fg = colors.bg, bg = colors.blue, gui = "bold" },
+            a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
         },
         replace = {
             a = { fg = colors.bg, bg = colors.error, gui = "bold" },
@@ -228,7 +219,6 @@ local function lualine(colors)
             c = { fg = colors.norm_subtle, bg = colors.bg_very_subtle },
         },
     }
-    ]]
 end
 
 local function lightline(colors)

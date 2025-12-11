@@ -3,7 +3,7 @@ local registry = {
     { name = "syntax", module = "paprika.highlights.syntax", optional = false },
     { name = "treesitter", module = "paprika.highlights.treesitter", optional = true },
     { name = "lsp", module = "paprika.highlights.lsp", optional = true },
-    { name = "plugins", module = "paprika.highlights.plugins", optional = true },
+    { name = "plugins", module = "paprika.highlights.plugins", optional = false },
 }
 
 local modules = {}
