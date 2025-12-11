@@ -14,7 +14,7 @@ local base = {
     lightest_gray = { gui = "#E5E5E5", cterm = 254 },
     yellow = { gui = "#FED442", cterm = 221 },
     pink = { gui = "#EF233C", cterm = 167 },
-    green = { gui = "#7CF141", cterm = 29 },
+    green = { gui = "#AAF683", cterm = 29 },
     red = { gui = "#B31D28", cterm = 124 },
     orange = { gui = "#FF8500", cterm = 166 },
     blue = { gui = "#60D394", cterm = 26 },

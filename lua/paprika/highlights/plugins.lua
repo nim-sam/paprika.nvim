@@ -192,31 +192,37 @@ local function statusline(colors)
     return s
 end
 
+local function hex(c)
+    return type(c) == "table" and c.gui or c
+end
+
 local function lualine(colors)
     return {
         normal = {
-            a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
-            b = { fg = colors.norm, bg = colors.bg_subtle },
-            c = { fg = colors.norm, bg = colors.bg_very_subtle },
+            a = { fg = hex(colors.bg), bg = hex(colors.accent), gui = "bold" },
+            b = { fg = hex(colors.accent), bg = hex(colors.bg) },
+            c = { fg = hex(colors.norm), bg = hex(colors.bg_very_subtle) },
         },
         insert = {
-            a = { fg = colors.bg, bg = colors.orange, gui = "bold" },
-            b = { fg = colors.norm, bg = colors.bg_subtle },
-            c = { fg = colors.norm, bg = colors.bg_very_subtle },
+            a = { fg = hex(colors.bg), bg = hex(colors.orange), gui = "bold" },
+            b = { fg = hex(colors.orange), bg = hex(colors.bg) },
+            c = { fg = hex(colors.norm), bg = hex(colors.bg_very_subtle) },
         },
         visual = {
-            a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
+            a = { fg = hex(colors.bg), bg = hex(colors.blue), gui = "bold" },
+            b = { fg = hex(colors.blue), bg = hex(colors.bg), gui = "bold" },
         },
         replace = {
-            a = { fg = colors.bg, bg = colors.error, gui = "bold" },
+            a = { fg = hex(colors.bg), bg = hex(colors.green), gui = "bold" },
+            b = { fg = hex(colors.green), bg = hex(colors.bg), gui = "bold" },
         },
         command = {
-            a = { fg = colors.bg, bg = colors.warn, gui = "bold" },
+            a = { fg = hex(colors.bg), bg = hex(colors.warn), gui = "bold" },
         },
         inactive = {
-            a = { fg = colors.norm_subtle, bg = colors.bg_very_subtle, gui = "bold" },
-            b = { fg = colors.norm_subtle, bg = colors.bg_very_subtle },
-            c = { fg = colors.norm_subtle, bg = colors.bg_very_subtle },
+            a = { fg = hex(colors.norm_subtle), bg = hex(colors.bg_very_subtle), gui = "bold" },
+            b = { fg = hex(colors.norm_subtle), bg = hex(colors.bg_very_subtle) },
+            c = { fg = hex(colors.norm_subtle), bg = hex(colors.bg_very_subtle) },
         },
     }
 end

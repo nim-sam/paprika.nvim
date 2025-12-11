@@ -20,6 +20,11 @@ function M.load(opts)
         utils.apply_terminal(colors)
     end
     -- expose statusline/lightline tables via meta when needed
+    M._last_meta = meta
+end
+
+function M.lualine()
+    return M._last_meta.lualine
 end
 
 return M
