@@ -218,6 +218,11 @@ local function lualine(colors)
         },
         command = {
             a = { fg = hex(colors.bg), bg = hex(colors.warn), gui = "bold" },
+            b = { fg = hex(colors.warn), bg = hex(colors.bg), gui = "bold" },
+        },
+        terminal = {
+            a = { fg = hex(colors.bg), bg = hex(colors.blue), gui = "bold" },
+            b = { fg = hex(colors.blue), bg = hex(colors.bg), gui = "bold" },
         },
         inactive = {
             a = { fg = hex(colors.norm_subtle), bg = hex(colors.bg_very_subtle), gui = "bold" },
