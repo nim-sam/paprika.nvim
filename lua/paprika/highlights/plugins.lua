@@ -200,12 +200,12 @@ local function lualine(colors)
             c = { fg = colors.norm, bg = colors.bg_very_subtle },
         },
         insert = {
-            a = { fg = colors.bg, bg = colors.hint, gui = "bold" },
+            a = { fg = colors.bg, bg = colors.orange, gui = "bold" },
             b = { fg = colors.norm, bg = colors.bg_subtle },
             c = { fg = colors.norm, bg = colors.bg_very_subtle },
         },
         visual = {
-            a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
+            a = { fg = colors.bg, bg = colors.blue, gui = "bold" },
         },
         replace = {
             a = { fg = colors.bg, bg = colors.error, gui = "bold" },
