@@ -34,7 +34,7 @@ function M.get(colors, config)
     highlights.Search = { fg = colors.bg, bg = colors.norm, bold = true }
     highlights.IncSearch = { fg = colors.bg, bg = colors.norm_subtle }
     highlights.VertSplit = { fg = colors.border, bg = colors.border }
-    highlights.WinSeparator = { fg = colors.border, bg = colors.border }
+    highlights.WinSeparator = { fg = colors.bg, bg = colors.bg }
     highlights.StatusLine = { fg = colors.norm, bg = colors.bg_very_subtle }
     highlights.StatusLineNC = { fg = colors.norm_subtle, bg = colors.bg_very_subtle }
     highlights.TabLine = { fg = colors.norm, bg = colors.bg_very_subtle }

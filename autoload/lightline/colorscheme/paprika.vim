@@ -33,4 +33,4 @@ let s:p.tabline.tabsel  = [[ s:medium_gray, s:yellow    ]]
 let s:p.tabline.middle  = [[ s:yellow, s:medium_gray    ]]
 
 
-let g:lightline#colorscheme#komau#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#paprika#palette = lightline#colorscheme#flatten(s:p)

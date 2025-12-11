@@ -1,4 +1,4 @@
-local fn = require("komau.fn")
+local fn = require("paprika.fn")
 
 local defaults = {
     style = "auto", -- "dark", "light", or "auto"

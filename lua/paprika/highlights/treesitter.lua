@@ -1,5 +1,5 @@
-local fn = require("komau.fn")
-local utils = require("komau.utils")
+local fn = require("paprika.fn")
+local utils = require("paprika.utils")
 
 local M = {}
 
@@ -23,17 +23,18 @@ function M.get(colors, config)
     local styles = config.styles or {}
     local spec = {}
 
-    spec["@comment"] = link("Comment")
+    spec["@comment"] = { fg = colors.lighter_black, italic = true }
+    spec["@string.documentation.python"] = { fg = colors.lighter_black, italic = true }
     spec["@punctuation"] = { fg = colors.norm }
     spec["@punctuation.delimiter"] = { fg = colors.norm }
     spec["@punctuation.bracket"] = { fg = colors.norm }
     spec["@punctuation.special"] = { fg = colors.accent }
 
     spec["@constant"] = link("Constant")
-    spec["@constant.builtin"] = { fg = colors.accent }
-    spec["@constant.macro"] = link("PreProc")
-    spec["@string"] = link("String")
-    spec["@string.regex"] = { fg = colors.accent }
+    spec["@constant.builtin"] = link("Constant")
+    spec["@constant.macro"] = link("Constant")
+    spec["@string"] = { fg = colors.green }
+    spec["@string.regex"] = { fg = colors.orange }
     spec["@string.escape"] = { fg = colors.accent }
     spec["@string.special"] = { fg = colors.accent }
     spec["@character"] = link("Character")
@@ -41,8 +42,8 @@ function M.get(colors, config)
     spec["@boolean"] = link("Boolean")
     spec["@float"] = link("Float")
 
-    spec["@function"] = apply_style({ fg = colors.fg }, styles.functions)
-    spec["@function.builtin"] = { fg = colors.accent }
+    spec["@function"] = apply_style({ fg = colors.accent, italic = true }, styles.functions)
+    spec["@function.builtin"] = { fg = colors.orange }
     spec["@function.macro"] = { fg = colors.accent }
     spec["@method"] = spec["@function"]
     spec["@constructor"] = { fg = colors.fg }
@@ -58,7 +59,7 @@ function M.get(colors, config)
 
     spec["@type"] = link("Type")
     spec["@type.definition"] = link("Type")
-    spec["@type.builtin"] = { fg = colors.accent }
+    spec["@type.builtin"] = { fg = colors.orange }
     spec["@type.qualifier"] = link("Keyword")
     spec["@storageclass"] = link("StorageClass")
     spec["@attribute"] = { fg = colors.accent }
@@ -86,11 +87,11 @@ function M.get(colors, config)
     spec["@keyword.operator"] = link("Operator")
     spec["@keyword.function"] = spec["@keyword"]
     spec["@keyword.return"] = spec["@keyword"]
-    spec["@keyword.repeat"] = spec["@keyword"]
-    spec["@keyword.conditional"] = spec["@keyword"]
-    spec["@keyword.import"] = spec["@keyword"]
-    spec["@conditional"] = spec["@keyword"]
-    spec["@repeat"] = spec["@keyword"]
+    spec["@keyword.repeat"] = { fg = colors.blue, bold = true }
+    spec["@keyword.conditional"] = { fg = colors.blue, bold = true }
+    spec["@keyword.import"] = { fg = colors.blue, bold = true }
+    spec["@conditional"] = { fg = colors.blue, bold = true }
+    spec["@repeat"] = { fg = colors.blue, bold = true }
     spec["@debug"] = link("Debug")
     spec["@exception"] = spec["@keyword"]
 

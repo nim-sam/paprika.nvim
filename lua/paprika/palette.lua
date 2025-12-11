@@ -1,11 +1,11 @@
-local fn = require("komau.fn")
+local fn = require("paprika.fn")
 
 local M = {}
 
 local base = {
     black = { gui = "#222222", cterm = 235 },
     medium_gray = { gui = "#767676", cterm = 243 },
-    white = { gui = "#F5EEE6", cterm = 255 },
+    white = { gui = "#EDF2F4", cterm = 255 },
     light_black = { gui = "#424242", cterm = 238 },
     lighter_black = { gui = "#545454", cterm = 240 },
     subtle_black = { gui = "#303030", cterm = 236 },
@@ -13,12 +13,12 @@ local base = {
     lighter_gray = { gui = "#CCCCCC", cterm = 252 },
     lightest_gray = { gui = "#E5E5E5", cterm = 254 },
     yellow = { gui = "#FED442", cterm = 221 },
-    pink = { gui = "#D73A49", cterm = 167 },
-    green = { gui = "#22863A", cterm = 29 },
+    pink = { gui = "#EF233C", cterm = 167 },
+    green = { gui = "#AAF683", cterm = 29 },
     red = { gui = "#B31D28", cterm = 124 },
-    orange = { gui = "#E36209", cterm = 166 },
-    blue = { gui = "#005CC5", cterm = 26 },
-    purple = { gui = "#6F42C1", cterm = 96 },
+    orange = { gui = "#FF8500", cterm = 166 },
+    blue = { gui = "#60D394", cterm = 26 },
+    purple = { gui = "#1D3557", cterm = 96 },
 }
 
 local function hex_to_rgb(hex)
@@ -68,10 +68,10 @@ local variants = {
             norm_subtle = base.medium_gray,
             cursorline_nr = base.white,
             accent = base.pink,
-            warn = base.yellow,
-            info = base.blue,
-            hint = base.green,
-            error = base.red,
+            warn = base.lighter_gray,
+            info = base.medium_gray,
+            hint = base.medium_gray,
+            error = base.pink,
             selection = base.subtle_black,
             border = base.lighter_black,
             float_bg = base.subtle_black,
@@ -106,10 +106,10 @@ local variants = {
             norm_subtle = base.medium_gray,
             cursorline_nr = base.black,
             accent = base.pink,
-            warn = base.orange,
-            info = base.blue,
-            hint = base.green,
-            error = base.red,
+            warn = base.light_black,
+            info = base.medium_gray,
+            hint = base.medium_gray,
+            error = base.pink,
             selection = base.lightest_gray,
             border = base.light_gray,
             float_bg = base.lightest_gray,

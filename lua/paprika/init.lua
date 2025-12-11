@@ -1,8 +1,8 @@
-local config = require("komau.config")
-local highlights = require("komau.highlights")
-local palette = require("komau.palette")
-local templates = require("komau.templates")
-local utils = require("komau.utils")
+local config = require("paprika.config")
+local highlights = require("paprika.highlights")
+local palette = require("paprika.palette")
+local templates = require("paprika.templates")
+local utils = require("paprika.utils")
 
 local M = {}
 

@@ -1,4 +1,4 @@
-local utils = require("komau.utils")
+local utils = require("paprika.utils")
 
 local function with_style(spec, style_opts)
     return utils.apply_style(spec, style_opts)
@@ -15,12 +15,12 @@ function M.get(colors, config)
     local highlights = {}
 
     highlights.Comment = with_style({ fg = colors.comment }, styles.comments)
-    highlights.Constant = { fg = colors.norm_subtle }
+    highlights.Constant = { fg = colors.orange }
     highlights.String = with_style({ fg = colors.norm }, styles.strings)
-    highlights.Character = link("Constant")
-    highlights.Number = link("Constant")
-    highlights.Boolean = link("Constant")
-    highlights.Float = link("Constant")
+    highlights.Character = { fg = colors.green }
+    highlights.Number = { fg = colors.green }
+    highlights.Boolean = { fg = colors.green }
+    highlights.Float = { fg = colors.green }
 
     highlights.Identifier = with_style({ fg = colors.fg }, styles.variables)
     highlights.Function = with_style({ fg = colors.fg }, styles.functions)

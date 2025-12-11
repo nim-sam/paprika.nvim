@@ -1,9 +1,9 @@
 local registry = {
-    { name = "core", module = "komau.highlights.core", optional = false },
-    { name = "syntax", module = "komau.highlights.syntax", optional = false },
-    { name = "treesitter", module = "komau.highlights.treesitter", optional = true },
-    { name = "lsp", module = "komau.highlights.lsp", optional = true },
-    { name = "plugins", module = "komau.highlights.plugins", optional = true },
+    { name = "core", module = "paprika.highlights.core", optional = false },
+    { name = "syntax", module = "paprika.highlights.syntax", optional = false },
+    { name = "treesitter", module = "paprika.highlights.treesitter", optional = true },
+    { name = "lsp", module = "paprika.highlights.lsp", optional = true },
+    { name = "plugins", module = "paprika.highlights.plugins", optional = true },
 }
 
 local modules = {}
@@ -12,7 +12,7 @@ for _, entry in ipairs(registry) do
     if ok and type(mod) == "table" then
         modules[entry.name] = mod
     elseif not entry.optional then
-        error(string.format("komau: failed to load highlight module '%s' (%s)", entry.name, entry.module))
+        error(string.format("paprika: failed to load highlight module '%s' (%s)", entry.name, entry.module))
     end
 end
 
@@ -72,7 +72,7 @@ function M.collect(colors, config)
             else
                 vim.schedule(function()
                     vim.notify(
-                        string.format("komau: failed to compute %s highlights: %s", name, chunk),
+                        string.format("paprika: failed to compute %s highlights: %s", name, chunk),
                         vim.log.levels.WARN
                     )
                 end)

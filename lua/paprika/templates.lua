@@ -1,5 +1,5 @@
-local fn = require("komau.fn")
-local utils = require("komau.utils")
+local fn = require("paprika.fn")
+local utils = require("paprika.utils")
 
 local builtin = {}
 
@@ -66,7 +66,7 @@ function M.apply(highlights, colors, config)
             result = fn.deep_extend("force", result, delta)
         elseif not ok then
             utils.schedule(function()
-                utils.notify(string.format("komau: template error: %s", delta), vim.log.levels.WARN)
+                utils.notify(string.format("paprika: template error: %s", delta), vim.log.levels.WARN)
             end)
         end
     end

@@ -10,6 +10,24 @@ local function merge(target, source)
     end
 end
 
+local function bufferline(colors)
+    local b = {}
+    b.BufferLineOffsetSeparator = { fg = "#121212", bg = "#121212" }
+    return b
+end
+
+local function neotree(colors)
+    local n = {}
+    n.NeoTreeNormal = { fg = colors.medium_gray }
+    n.NeoTreeFileName = { fg = colors.medium_gray }
+    n.NeoTreeDirectoryIcon = { fg = colors.medium_gray }
+    n.NeoTreeDirectoryName = { fg = colors.medium_gray, bold = true }
+    n.NeoTreeGitUntracked = { fg = colors.bg_subtle, italic = true }
+    n.NeoTreeModified = { fg = colors.medium_gray, bold = true }
+    n.NeoTreeGitConflict = { fg = colors.medium_gray, bold = true, italic = true }
+    return n
+end
+
 local function telescope(colors)
     local t = {}
     t.TelescopeNormal = { fg = colors.norm, bg = colors.float_bg }
@@ -236,6 +254,12 @@ function M.get(colors, config)
     local integrations = config.integrations or {}
     local spec = {}
 
+    if integrations.bufferline ~= false then
+        merge(spec, bufferline(colors))
+    end
+    if integrations.neotree ~= false then
+        merge(spec, neotree(colors))
+    end
     if integrations.telescope ~= false then
         merge(spec, telescope(colors))
     end
