@@ -199,6 +199,8 @@ local function lualine(colors)
     l.lualine_a_visual = { bg = colors.blue }
     l.lualine_a_insert = { bg = colors.orange }
 
+    return l
+
     --[[
     return {
         normal = {
