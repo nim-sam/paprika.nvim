@@ -16,18 +16,18 @@ function M.get(colors, config)
 
     highlights.Comment = with_style({ fg = colors.comment }, styles.comments)
     highlights.Constant = { fg = colors.orange }
-    highlights.String = with_style({ fg = colors.norm }, styles.strings)
+    highlights.String = { fg = colors.green }
     highlights.Character = { fg = colors.green }
     highlights.Number = { fg = colors.green }
     highlights.Boolean = { fg = colors.green }
     highlights.Float = { fg = colors.green }
 
     highlights.Identifier = with_style({ fg = colors.fg }, styles.variables)
-    highlights.Function = with_style({ fg = colors.fg }, styles.functions)
+    highlights.Function = { fg = colors.accent }
 
     highlights.Statement = with_style({ fg = colors.fg }, styles.keywords)
-    highlights.Conditional = link("Statement")
-    highlights.Repeat = link("Statement")
+    highlights.Conditional = { fg = colors.blue }
+    highlights.Repeat = { fg = colors.blue }
     highlights.Label = link("Statement")
     highlights.Operator = { fg = colors.norm }
     highlights.Keyword = link("Statement")
@@ -39,7 +39,7 @@ function M.get(colors, config)
     highlights.Macro = link("PreProc")
     highlights.PreCondit = link("PreProc")
 
-    highlights.Type = { fg = colors.norm }
+    highlights.Type = { fg = colors.orange }
     highlights.StorageClass = link("Type")
     highlights.Structure = link("Type")
     highlights.Typedef = link("Type")
@@ -66,7 +66,7 @@ function M.get(colors, config)
     highlights.MarkdownCodeDelimiter = { fg = colors.norm }
     highlights.MarkdownHeadingDelimiter = { fg = colors.fg }
     highlights.MarkdownRule = { fg = colors.bg_subtle }
-    highlights.MarkdownHeadingRule = { fg = colors.bg_subtle }
+    highlights.MarkdownHeadingRule = { fg = colors.norm }
     highlights.MarkdownId = { fg = colors.light_gray }
     highlights.MarkdownBlockquote = { fg = colors.bg_subtle }
     highlights.MarkdownItalic = with_style({ fg = colors.light_gray }, { italic = true })
