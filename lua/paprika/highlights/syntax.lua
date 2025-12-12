@@ -32,6 +32,7 @@ function M.get(colors, config)
     highlights.Operator = { fg = colors.norm }
     highlights.Keyword = link("Statement")
     highlights.Exception = link("Statement")
+    highlights.Include = { fg = colors.blue }
 
     highlights.PreProc = { fg = colors.norm_subtle }
     highlights.Include = link("PreProc")
