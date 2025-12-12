@@ -59,6 +59,9 @@ function M.get(colors, config)
     highlights.NonText = { fg = colors.lighter_black }
     highlights.Directory = { fg = colors.norm, bold = true }
 
+    highlights.Title = { fg = colors.norm, bold = true }
+    highlights.Special = { fg = colors.norm_subtle, italic = true }
+
     highlights.MarkdownCode = { fg = colors.green, bg = colors.bg_subtle }
     highlights.MarkdownLinkReference = { fg = colors.info }
     highlights.MarkdownJekyllFrontMatter = { fg = colors.norm_subtle }

@@ -28,7 +28,7 @@ function M.get(colors, config)
     spec["@punctuation"] = { fg = colors.norm }
     spec["@punctuation.delimiter"] = { fg = colors.norm }
     spec["@punctuation.bracket"] = { fg = colors.norm }
-    spec["@punctuation.special"] = { fg = colors.accent }
+    spec["@punctuation.special"] = { fg = colors.norm_subtle, italic = true }
 
     spec["@constant"] = link("Constant")
     spec["@constant.builtin"] = link("Constant")
