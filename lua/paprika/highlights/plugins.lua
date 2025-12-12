@@ -12,7 +12,7 @@ end
 
 local function bufferline(colors)
     local b = {}
-    b.BufferLineOffsetSeparator = { fg = "#121212", bg = "#121212" }
+    b.BufferLineOffsetSeparator = { fg = colors.bg, bg = colors.bg }
     return b
 end
 
