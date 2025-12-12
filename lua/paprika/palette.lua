@@ -5,7 +5,7 @@ local M = {}
 local base = {
     black = { gui = "#222222", cterm = 235 },
     medium_gray = { gui = "#767676", cterm = 243 },
-    white = { gui = "#EDF2F4", cterm = 255 },
+    white = { gui = "#FFFFFF", cterm = 255 },
     light_black = { gui = "#424242", cterm = 238 },
     lighter_black = { gui = "#545454", cterm = 240 },
     subtle_black = { gui = "#303030", cterm = 236 },
